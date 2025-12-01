@@ -8,6 +8,7 @@ public class pageFormularioTextBox extends basePage {
         private String direccion = "//textarea[@id='currentAddress']";
         private String permanenteDireccion = "//textarea[@id='permanentAddress']";
         private String btnSubmit = "//button[@id='submit']";
+        private String mensajeTextBox = "//div[@class='border col-md-12 col-sm-12']";
 
 
     public pageFormularioTextBox(){
@@ -37,6 +38,11 @@ public class pageFormularioTextBox extends basePage {
     //Metodo para dar clic en el botón Submit
     public void darClicBotonSubmit(){
        clickElementoConBloqueo(btnSubmit);
+    }
+
+    //Metodo para verificar que muestre mensaje información registrada.
+    public void verificarMensaje(){
+        mensaje(mensajeTextBox);
     }
 
 

@@ -51,9 +51,14 @@ public class pasos {
         textBox.ingresarDireccionPermanente(pDireccion);
     }
 
-    @Then("El usuario da clic en boton submit")
+    @And("El usuario da clic en boton submit")
     public void yoDoyClicBtnSubmit(){
         textBox.darClicBotonSubmit();
+    }
+
+    @Then("El sistema muestra la información registrada correctamente.")
+    public void yoVerificoinfroamcionRegistrada(){
+        textBox.verificarMensaje();
     }
     
 }

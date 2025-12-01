@@ -56,9 +56,16 @@ public class basePage {
         Encontrar(locator).sendKeys(KeysToSend);
     }
 
+        //Permite validar que muestre mensaje esperado.
     public void verificarMensaje(String palabraEncontrada, String messages){
             String palabra = driver.findElement(By.xpath(palabraEncontrada)).getText();
             Assert.assertEquals(palabra, messages);
+    }
+
+        //Permita validar que muestre mensaje
+    public void mensaje(String mensaje){
+        String mensajeEncontrado = driver.findElement(By.xpath(mensaje)).getText();
+        Assert.assertNotNull(mensajeEncontrado, "El texto del elemento es nulo");
     }
 
     //dar clic a un elemento que esta bloqueado por otro encima.

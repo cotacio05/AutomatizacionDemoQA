@@ -18,7 +18,8 @@ Feature: Registro en la opcion de TextBox
     And El usuario Ingresa el Correo "<Correo>"
     And El usuario ingresa la direccion "<Direccion>"
     And El usuario ingresa Permanent direccion "<Direccion Permanente>"
-    Then El usuario da clic en boton submit
+    And El usuario da clic en boton submit
+    Then El sistema muestra la información registrada correctamente.
 
      Examples: 
             | Nombre | Correo | Direccion | Direccion Permanente |
